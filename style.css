@@ -510,13 +510,13 @@ footer .socials .fa-linkedin {
   cursor: pointer;
   color: #fff;
   z-index: 1000;
-  position: relative;
+  position: absolute;
 }
 
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 3.3rem;
     left: 2.1rem; /* Position the toggle button on the left */
   }
