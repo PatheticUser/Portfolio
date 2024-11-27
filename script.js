@@ -10,9 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Handle "Contact Me" button click
-  document.querySelector(".btn").addEventListener("click", () => {
-    window.location.href = "mailto:rameezalipacific@gmail.com"; // Replace with your email
-  });
+  // document.querySelector(".btn").addEventListener("click", () => {
+  //   window.location.href = "mailto:rameezalipacific@gmail.com"; // Replace with your email
+  // });
+
+   document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".btn").addEventListener("click", () => {
+          window.location.href = "mailto:rameezalipacific@gmail.com";
+        });
+      });
 
   // Handle navigation link clicks
   const link1 = document.getElementById("link1");
