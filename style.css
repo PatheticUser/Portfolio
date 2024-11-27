@@ -26,7 +26,7 @@ body {
 nav {
   max-width: 1200px;
   margin: auto;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,6 +113,16 @@ header {
   animation: fadeIn 1.5s ease-out;
 }
 
+.headContainer{
+  display: grid;
+  grid-template-columns: 550px 550px;
+  gap: 50px;
+}
+model-viewer{
+width: 100%;
+height: 25rem;
+border-radius: 100%;
+}
 header .content h4 {
   margin-bottom: 1rem;
   color: #ccc;
