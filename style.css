@@ -8,6 +8,20 @@
   box-sizing: border-box;
 }
 
+.video-background {
+  position: absolute;
+  top: 30;
+  left: 50;
+  width: 50%; 
+  height: 50%;
+  z-index: -1; 
+  opacity: 0.8;
+}
+
+.video-background {
+  mix-blend-mode: screen;
+}
+
 img {
   width: 100%;
   display: flex;
