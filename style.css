@@ -1,0 +1,697 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+/* for desktop */
+.video-background {
+  position: absolute;
+  top: 55px; /* Added units for proper positioning */
+  left: 50%;
+  width: 80%;
+  height: 55%;
+  z-index: 1;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+}
+
+/* for mobile */
+@media (max-width: 768px) {
+  .video-background {
+    position: absolute;
+    top: 81%; /* Adjusted for mobile, you can tweak this */
+    left: 10%; /* Adjust as needed for mobile */
+    width: 85%; /* Increased width for mobile */
+    height: 40%; /* Increased height for mobile */
+    z-index: -1;
+    opacity: 0.8;
+    mix-blend-mode: screen;
+  }
+}
+
+/* Prevent horizontal scrollbar on desktop and mobile */
+html, body {
+  overflow-x: hidden;
+}
+
+
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #18181b;
+  scroll-behavior: smooth;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-logo {
+  max-width: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1d4ed8;
+  transition: width 0.3s ease;
+}
+
+.link a:hover {
+  color: #1d4ed8;
+}
+
+.link a:hover::after {
+  width: 70%;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 50px #1d4ed8;
+  z-index: -100;
+  transition: opacity 0.5s ease;
+}
+
+header {
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+header .content h4 {
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
+}
+
+header .content h1 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+  opacity: 0;
+  animation: fadeIn 1s 1s forwards;
+}
+
+.justified-text {
+  text-align: justify;
+}
+
+header .content h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+header .content p {
+  margin-bottom: 2rem;
+  color: #ccc;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s forwards;
+}
+
+header .image {
+  position: relative;
+}
+.header-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0rem;
+  margin-bottom: 2rem; /* Reduced space after header content */
+}
+
+.text-content {
+  flex: 1;
+}
+header .image::before {
+  content: "o";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 38rem;
+  font-weight: 400;
+  line-height: 20rem;
+  color: #1d4ed8;
+  opacity: 0.2;
+  z-index: -100;
+}
+
+header .image img {
+  max-width: 600px;
+  margin: auto;
+  transition: transform 0.5s ease;
+}
+
+header .image:hover img {
+  transform: scale(1.05);
+}
+
+section .header {
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.features {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.features .card {
+  background-color: #27272a;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: slideIn 1s ease-out;
+}
+
+.features .card:hover {
+  background-color: #323232;
+  border-color: #fff;
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.features .card span {
+  display: inline-block;
+  background-color: #1e40af;
+  padding: 2px 9px;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.features .card h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.features .card p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.features .card a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.features .card a:hover {
+  color: #1e40af;
+}
+
+.sub-header {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
+  text-align: justify;
+}
+
+.pricing {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.pricing .card {
+  padding: 3rem 2rem;
+  background-color: #27272a;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pricing .card:hover {
+  background-color: #323232;
+  border-color: #fff;
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pricing .card .content {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.pricing .card h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.pricing .card h3 {
+  color: #fff;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px dashed #fff;
+}
+
+.pricing .card p {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.pricing .card p i {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+}
+
+.pricing .card button {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pricing .card button:hover {
+  background-color: #1e40af;
+  border-color: #1e40af;
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #18181b; /* Dark background for footer */
+  color: #ffffff; /* White text color */
+  padding: 1rem;
+  text-align: center; /* Center align text in the footer */
+}
+
+footer .footer-content {
+  margin-bottom: 20px;
+}
+
+footer .footer-heading {
+  font-size: 1.5rem; /* Medium heading size */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+footer .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between social icons */
+}
+
+footer .socials a {
+  color: #ccc;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  font-size: 1.5rem; /* Adjust size of the icons */
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+footer .socials a:hover {
+  color: #fff;
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+footer .socials .fa-facebook {
+  font-size: 1.5rem;
+}
+
+footer .socials .fa-twitter {
+  font-size: 1.5rem;
+}
+
+footer .socials .fa-instagram {
+  font-size: 1.5rem;
+}
+
+footer .socials .fa-linkedin {
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.main-content {
+  display: hidden; /* Initially hidden */
+  opacity: 0; /* Set opacity to 0 for transition effect */
+  transition: opacity 0.1s ease-in; /* Smooth transition for showing */
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.loader {
+  position: relative;
+  width: 256px;
+  background-color: transparent;
+}
+
+.glow-line {
+  height: 2px; /* Made it thinner */
+  background-color: blue; /* Keeping the same color */
+  box-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 20px blue, 0 0 40px blue,
+    0 0 80px blue;
+  transition: width 100ms ease-out;
+}
+
+.glow-blur {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Made it thinner */
+  background-color: blue; /* Changed to blue to match glow-line */
+  opacity: 0.7;
+  transform: translateY(-50%);
+  box-shadow: 0 0 3px blue, /* Subtle glow */ 0 0 5px blue,
+    /* Subtle glow */ 0 0 10px blue; /* Subtle glow */
+  animation: glowing 1.5s infinite; /* Adjusted animation timing */
+}
+
+/* Keyframes for glowing effect */
+@keyframes glowing {
+  0% {
+    opacity: 0.5; /* Start with lower opacity */
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 1; /* Increase opacity for glowing effect */
+    transform: translateY(-50%) scale(1.05); /* Slight scale for emphasis */
+  }
+  100% {
+    opacity: 0.5; /* Fade back */
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .glow-line {
+    height: 1px; /* Thinner on mobile */
+  }
+
+  .glow-blur {
+    height: 3px; /* Thinner on mobile */
+  }
+}
+
+@keyframes l2 {
+  to {
+    background-size: 100% 3px;
+  }
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1000;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+    position: fixed;
+    top: 3.3rem;
+    left: 2.1rem; /* Position the toggle button on the left */
+  }
+
+  /* Side Menu Styling */
+  .nav-links {
+    position: fixed;
+    left: -40%; /* Initially off-screen on the left */
+    top: 0;
+    width: 40%; /* Take up 60% of the screen width */
+    height: 100vh; /* Full height */
+    background-color: rgba(24, 24, 27, 0.6); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blurred effect */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    padding-top: 6rem;
+    transition: left 0.3s ease; /* Smooth slide-in effect */
+    z-index: 999;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .nav-links.active {
+    left: 0; /* Slide in from the left */
+  }
+
+  /* Menu links styling */
+  .nav-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    padding-left: 2.1rem;
+  }
+}
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: left;
+    justify-content: space-between; /* This spreads the nav links and button apart */
+    gap: 3rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: right;
+    padding-left: 0;
+    gap: 1.5 rem;
+    flex: 1; /* Make this take up remaining space */
+  }
+
+  header {
+    display: block;
+    text-align: left;
+  }
+
+  header .content h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  header .content h4 {
+    font-size: 0.9rem;
+  }
+
+  header .content p {
+    font-size: 0.9rem;
+  }
+
+  header .image img {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr; /* Stack the project cards vertically */
+  }
+
+  .pricing {
+    grid-template-columns: 1fr; /* Stack pricing cards vertically */
+  }
+
+  .footer-heading {
+    font-size: 1.25rem;
+  }
+
+  .socials a {
+    font-size: 1.25rem;
+    padding: 5px 8px;
+  }
+
+  .btn {
+    margin-left: auto; /* This ensures the button moves to the far right */
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  /* For very small devices (phones under 500px) */
+  @media (max-width: 500px) {
+    header .content h1 {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
+
+    header .content p {
+      font-size: 0.85rem;
+    }
+
+    .features .card {
+      padding: 0.5rem;
+    }
+
+    .pricing .card {
+      padding: 1.5rem;
+    }
+  }
+}
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top-btn:hover {
+  background-color: #1e40af;
+  transform: scale(1.1);
+}
+
+.back-to-top-btn i {
+  font-size: 24px;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Rameez's Portfolio</title>
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+</head>
+
+<body>
+
+    <div class="loader-container">
+        <div class="loader">
+          <div class="glow-blur" id="glow-blur"></div>
+          <div class="glow-line" id="glow-line"></div>
+        </div>
+    </div>   
+
+    <button id="backToTopBtn" class="back-to-top-btn">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    
+    <div class="main-content" style="display: none;">
+    <nav>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <i class="ri-menu-line"></i>
+          </button>          
+        <ul class="nav-links">
+            <li class="link"><a href="#home">Home</a></li>
+            <li id="link1" class="link"><a href="#projects">Projects</a></li>
+            <li id="link2" class="link"><a href="#skills">Skills</a></li>
+            <li id="link3" class="link"><a href="#about">About</a></li>
+        
+
+        </ul>
+        <button class="btn" onclick="window.location.href='mailto:rameezalipacific@gmail.com'">Contact Me</button>
+    </nav>
+
+    <header id="home" class="container">
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <h4>BUILDING THE FUTURE OF SOFTWARE</h4>
+            <div class="header-content">
+                <div class="text-content">
+                    <h1>Hi, I'm <span>Muhammad Rameez</span>, Software Engineer</h1>
+                    <p class="justified-text">
+                        Always up for a new challenge and hooked on exploring C++, Python, and everything code. Every day's a chance to level up—whether it's building, problem-solving, or pushing limits. My mindset? "Learn it, make it happen, and keep growing." If there's a way to create impact through tech, I'm all in.                    </p>
+                    <button class="btn">Explore My Work</button>
+                </div>
+                <div class="video-content"> <video width="660" height="385" autoplay loop muted class="video-background">
+                    <source src="..\images\animation.mp4" type="video/mp4"> Your browser does not support the
+                    video tag.
+                </video> </div>
+        </div>               
+            </div>
+        </div>
+    </header>
+    
+    <section id="projects" class="container">
+        <h2 class="header">MY PROJECTS</h2>
+        <div class="features">
+            <div class="card">
+                <span><i class="ri-code-line"></i></span>
+                <h4>Terminal Banking System</h4>
+                <p>
+                    A comprehensive banking system featuring secure logins, transaction handling, and loan applications.
+                </p>
+                <a href="#">View Project <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="card">
+                <span><i class="ri-game-line"></i></span>
+                <h4>Interactive Games</h4>
+                <p>
+                    Engaging games including Tic-Tac-Toe with AI and a Flappy Bird clone, showcasing my programming skills.
+                </p>
+                <a href="#">View Project <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="card">
+                <span><i class="ri-tools-line"></i></span>
+                <h4>GUI Text Editor</h4>
+                <p>
+                    A basic text editor with features like find, replace, and undo, demonstrating my GUI development skills.
+                </p>
+                <a href="#">View Project <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="card">
+                <span><i class="ri-article-line"></i></span>
+                <h4>Schedule Management System</h4>
+                <p>
+                    A system for managing schedules, showcasing my expertise in software solutions for everyday tasks.
+                </p>
+                <a href="#">View Project <i class="ri-arrow-right-line"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="header">SKILLS & EXPERTISE</h2>
+        <p class="sub-header">
+            My skill set includes various programming languages, tools, and methodologies that help me tackle complex problems and deliver high-quality software solutions.
+        </p>
+        <div class="pricing">
+            <div class="card">
+                <div class="content">
+                    <h4>Programming</h4>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        C++ 
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Python
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Data Structures & Algorithms
+                    </p>
+                </div>
+                <button class="btn">Learn More</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h4>Machine Learning</h4>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Linear Algebra
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Neural Networks
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        AI Algorithms
+                    </p>
+                </div>
+                <button class="btn">Learn More</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h4>Software Development</h4>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        GUI Development
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Terminal Applications
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Project Management
+                    </p>
+                </div>
+                <button class="btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="header">ABOUT ME</h2>
+            <div class="sub-header">
+                I'm Muhammad Rameez, a software engineering student at Punjab Tianjin University of Technology in Lahore, Pakistan. As an avid ML/AI enthusiast, I'm passionate about training models and applying machine learning techniques to solve real-world problems. With expertise in C++, Python, and Data Structures & Algorithms, I thrive on tackling complex challenges and continuously expanding my skill set. I'm eager to contribute and grow in the fields of machine learning, AI, and software development.
+            </div>
+    </section>
+
+    <footer class="container">
+        <div class="footer-content">
+            <h2 class="footer-heading">Socials</h2>
+            <div class="socials">
+                <a href="https://github.com/PatheticUser" target="_blank" title="GitHub"><i class="ri-github-line"></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-rameez-600619249/" target="_blank" title="LinkedIn"><i class="ri-linkedin-line"></i></a>
+                <a href="https://leetcode.com/u/Pathetic-User/" target="_blank" title="LeetCode"><i class="ri-code-line"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2024 Muhammad Rameez. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</div>
+</body>
+
+</html>
